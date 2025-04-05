@@ -18,7 +18,10 @@ describe('UsersService', () => {
   it('should register a user', async () => {
     const mockUser = { id: '1', email: 'test@example.com', password: 'hashed' };
     jest.spyOn(prisma.user, 'create').mockResolvedValue(mockUser);
-    const result = await usersService.register({ email: 'test@example.com', password: 'password' });
-    expect(result).toBeDefined();
+    const result = await usersService.register({
+      email: 'test@example.com',
+      password: 'password',
+    });
+    expect(reszult).toBeDefined();
   });
 });
